@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+
+        <table class="table table-bordered table-responsive-sm table-responsive-md">
+            <thead>
+                <tr>
+                    <th scope="col">Nom et Prénom Donneur</th>
+                    <th scope="col">Num</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Type de Don</th>
+                    <th scope="col">Descrition</th>
+                    <th scope="col">Accepter?</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let ind of payload;let index = index '>
+                    <td> {{ind.donationData.controls.fullName.value}} </td>
+                    <td> {{ind.donationData.controls.phone.value}} </td>
+                    <td> {{ind.donationData.controls.adress.value}} </td>
+                    <td> {{ind.donationData.controls.donation.value}} </td>
+                    <td> {{ind.donationData.controls.desc.value}} </td>
+                    <td> <button type="button" class="btn btn-success" (click)="toggle(index)" id="{{ index }}"><i
+                        class="fas fa-check"></i></button></td>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

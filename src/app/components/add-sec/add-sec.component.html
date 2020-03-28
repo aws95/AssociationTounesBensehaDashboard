@@ -1,0 +1,130 @@
+<h1>Ajouter famille en difficulté</h1> <br />
+<form [formGroup]="familyForm" (ngSubmit)="submitFamily()">
+    <div class="row">
+        <div class="container">
+            <div class="col-12 card shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <div class="col">
+                        <h4 class="font-weight-bold text-primary">Infos sur Père</h4>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nom Père</label>
+                                    <input type="text" class="form-control" id="firstNameFather" formControlName="firstNameFather">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Prénom Père</label>
+                                    <input type="text" class="form-control" id="lastNameFather" formControlName="lastNameFather">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">CIN</label>
+                                    <input type="text" class="form-control" id="cinFather" formControlName="cinFather">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Adresse</label>
+                                    <input type="text" class="form-control" id="adresse" formControlName="adresse">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Age Père</label>
+                                    <input type="text" class="form-control" id="ageFather" formControlName="ageFather">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Num Père</label>
+                                    <input type="phone" class="form-control" id="phoneFather" formControlName="phoneFather">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email Père si possible</label>
+                                    <input type="email" class="form-control" id="emailFather" formControlName="emailFather">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-12 card shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <div class="col">
+                        <h4 class="font-weight-bold text-primary">Infos sur Mère</h4>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nom Mère</label>
+                                    <input type="text" class="form-control" id="firstNameMother" formControlName="firstNameMother">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Prénom Mère</label>
+                                    <input type="text" class="form-control" id="lastNameMother" formControlName="lastNameMother">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">CIN</label>
+                                    <input type="text" class="form-control" id="cinMother" formControlName="cinMother">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nombre des enfants</label>
+                                    <input type="text" class="form-control" id="children" formControlName="children">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Age Mère</label>
+                                    <input type="text" class="form-control" id="ageMother" formControlName="ageMother">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Num Mère</label>
+                                    <input type="phone" class="form-control" id="phoneMother" formControlName="phoneMother">
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email Mère si possible</label>
+                                    <input type="email" class="form-control" id="emailMother" formControlName="emailMother">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Enregistrer</button>
+    </div>
+</form>

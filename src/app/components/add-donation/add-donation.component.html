@@ -1,0 +1,69 @@
+<h1>Ajouter Don</h1> <br />
+<form [formGroup]="donationForm" (ngSubmit)="submitDonation()">
+    <div class="row">
+        <div class="col-12 card shadow-sm p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <div class="col">
+                    <h4 class="font-weight-bold text-primary">Infos sur Donneur</h4>
+                    <div class="form-row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Nom et Prénom</label>
+                                <input type="text" class="form-control" id="lastNameFather" formControlName="fullName">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Adresse</label>
+                                <input type="text" class="form-control" id="adresse" formControlName="adress">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Num</label>
+                                <input type="phone" class="form-control" id="phone" formControlName="phone">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Email</label>
+                                <input type="email" class="form-control" id="email" formControlName="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">  
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Type Don</label>
+                                <select class="form-control" id="gender" formControlName="donation">
+                                    <option value=""></option>
+                                    <option value="food">
+                                        Nourriture</option>
+                                    <option value="meds">
+                                        Médicament</option>
+                                    <option value="hyg">
+                                        Produit d'hygiène</option>
+                                    <option value="prot">
+                                        Produit de protection</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Decription Don</label>
+                                <input type="text" class="form-control" id="desc" formControlName="desc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Enregistrer</button>
+    </div>
+</form>

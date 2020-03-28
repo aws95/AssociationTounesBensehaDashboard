@@ -1,0 +1,29 @@
+
+<div class="card">
+    <div class="card-body">
+
+        <table class="table table-bordered table-responsive-sm table-responsive-md">
+            <thead>
+                <tr>
+                    <th scope="col">Famille</th>
+                    <th scope="col">Num Famille</th>
+                    <th scope="col">Volontaire</th>
+                    <th scope="col">Num Volontaire</th>
+                    <th scope="col">Don</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = 'let index of distPayload'>
+                    <td> {{index.family.familyInfo.controls.lastNameFather.value}} </td>
+                    <td> {{index.family.familyInfo.controls.phoneFather.value}} </td>
+                    <td> {{index.volFirstName}} {{index.volLastName}} </td>
+                    <td>  {{index.volNumber}} </td>
+                    <td>  {{index.don}} </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

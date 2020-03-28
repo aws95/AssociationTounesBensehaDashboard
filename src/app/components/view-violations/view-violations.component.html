@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-body">
+
+        <table class="table table-bordered table-responsive-sm table-responsive-md">
+            <thead>
+                <tr>
+                    <th scope="col">Adresse Violation</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Signaler?</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let ind of payload;let index = index '>
+                    <td> {{ind.violationData.controls.vadress.value}} </td>
+                    <td> {{ind.violationData.controls.violation.value}} </td>
+                    <td> {{ind.violationData.controls.vdesc.value}} </td>
+                    <td> <button type="button" class="btn btn-success" (click)="toggle(index)" id="{{ index }}"><i
+                        class="fas fa-check"></i></button></td>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="container">
+
+    <h1>Ajouter Volontaire</h1> <br />
+
+    <form [formGroup]="volForm" (ngSubmit)="submitVol()">
+        <div class="row">
+            <div class="col-sm col-md card shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <div class="col-sm col-md">
+                        <h4 class="font-weight-bold text-primary">INFROMATIONS</h4>
+                        <div class="form-row">
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nom</label>
+                                    <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                                </div>
+                            </div>
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Prénom</label>
+                                    <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">CIN</label>
+                                    <input type="text" class="form-control" id="cin" formControlName="cin">
+                                </div>
+                            </div>
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Adresse</label>
+                                    <input type="text" class="form-control" id="adress" formControlName="adress">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Age</label>
+                                    <input type="text" class="form-control" id="age" formControlName="age">
+                                </div>
+                            </div>
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Genre</label>
+                                    <select class="form-control" id="gender" formControlName="gender">
+                                        <option>Male</option>
+                                        <option>Femele</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Num</label>
+                                    <input type="phone" class="form-control" id="phone" formControlName="phone">
+                                </div>
+                            </div>
+                            <div class="col-sm col-md">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email</label>
+                                    <input type="email" class="form-control" id="email" formControlName="email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Enregistrer</button>
+        </div>
+    </form>
+</div>

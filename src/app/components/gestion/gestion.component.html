@@ -1,0 +1,61 @@
+<div class="container">
+    <h1>Distribuer les Dons</h1> <br />
+<form>
+    <div class="row">
+        <div class="col-12 card shadow-sm p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <div class="col">
+                    <h4 class="font-weight-bold text-primary">Livrer Don</h4>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Famille</label>
+                                <input type="text" [(ngModel)]="data.familyInfo.controls.lastNameFather.value" name="data.familyInfo.controls.lastNameFather.value" #name="ngModel" class="form-control" id="adresse">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Num Famille</label>
+                                <input type="phone" [(ngModel)]="data.familyInfo.controls.phoneFather.value" name="data.familyInfo.controls.phoneFather.value" #name="ngModel" class="form-control" id="familyPhone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Volontaire</label>
+                                <select *ngFor = "let vol of volPayload" (change)="selectOption($event.target.value)"
+                                [(ngModel)]="selected" class="form-control" id="vol">
+                                    <option value=""></option>
+                                    <option [value]="vol.volInfo.controls.firstName.value"> {{vol.volInfo.controls.firstName.value}} {{vol.volInfo.controls.lastName.value}} </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Num Volontaire</label>
+                                <input type="phone" [(ngModel)]="selectedVolNumber" name="selectedVolNumber" #name="ngModel"  class="form-control" id="volPhone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Don alloué pour cette amille</label>
+                                <input (input)="tcode=$event.target.value" type="text" class="form-control" id="don">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <button (click)="onClick()" class="btn btn-primary" type="submit">Enregistrer</button>
+    </div>
+</form>
+</div>

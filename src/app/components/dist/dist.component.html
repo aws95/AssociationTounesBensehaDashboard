@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-body">
+
+        <table class="table table-bordered table-responsive-sm table-responsive-md">
+            <thead>
+                <tr>
+                    <th scope="col">Familles</th>
+                    <th scope="col">Distribuer</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = 'let family of payload; let index = index'>
+                    <td> {{family.familyInfo.controls.lastNameFather.value}} </td>
+                    <td><button type="button" class="btn btn-success" (click)="toggle(index)" id="{{ index }}" routerLink="/home/gestion-distribution"><i
+                                class="fas fa-car-alt fa-2x text-danger-300"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
