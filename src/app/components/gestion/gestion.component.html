@@ -26,10 +26,9 @@
                         <div class="col-md">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Volontaire</label>
-                                <select *ngFor = "let vol of volPayload" (change)="selectOption($event.target.value)"
+                                <select  (change)="selectOption($event.target.value)"
                                 [(ngModel)]="selected" class="form-control" id="vol">
-                                    <option value=""></option>
-                                    <option [value]="vol.volInfo.controls.firstName.value"> {{vol.volInfo.controls.firstName.value}} {{vol.volInfo.controls.lastName.value}} </option>
+                                    <option *ngFor = "let vol of volPayload" [value]="vol.volInfo.controls.firstName.value"> {{vol.volInfo.controls.firstName.value}} {{vol.volInfo.controls.lastName.value}} </option>
                                 </select>
                             </div>
                         </div>
